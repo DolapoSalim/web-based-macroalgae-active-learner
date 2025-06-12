@@ -16,7 +16,7 @@
 - Image Ops: OpenCV & NumPy
 - Optional Storage: Save results locally or integrate with Firebase/GCP later.
 
-##### Directory Structure
+##### 📁 Directory Structure
 ``` graphql
 project/
 ├── images/                # raw images to label
@@ -27,4 +27,22 @@ project/
 │   ├── overlays/          # visualization of predictions
 │   └── annotations.json   # structured result
 └── pipeline.py            # your main script
+```
+
+##### 📂 To Run It Locally:
+- Save this file as app.py
+- Place yolo_model.pt and sam_b.pt in the same directory
+- Run the requirement file
+```Bash
+pip install -r requirements.txt
+streamlit run src/app.py
+```
+- Install dependencies:
+``` Bash
+pip install streamlit opencv-python pillow ultralytics
+```
+- Run the app:
+
+```Bash
+streamlit run app.py
 ```
