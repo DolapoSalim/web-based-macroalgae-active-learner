@@ -1,8 +1,8 @@
 ### Macroalgae Auto-Label + Coverage Web Tools
 
 ##### 🧩 Core Features
-|----------- | ----------- |
 | Features | Description |
+|----------- | ----------- |
 | 📤 Upload new underwater images | User can upload new image(s) via the web interface |
 | ⚙️ Auto-label with YOLO + SAM | YOLO detects → SAM segments each detection |
 | 🖼️ Display results interactively | 	Show segmentation overlays + class-wise masks |
