@@ -35,7 +35,6 @@ project/
 - Run the requirement file
 ```Bash
 pip install -r requirements.txt
-streamlit run src/app.py
 ```
 - Install dependencies:
 ``` Bash
@@ -44,5 +43,5 @@ pip install streamlit opencv-python pillow ultralytics
 - Run the app:
 
 ```Bash
-streamlit run app.py
+streamlit run project/scr/app.py
 ```
