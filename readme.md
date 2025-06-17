@@ -19,14 +19,17 @@
 ##### 📁 Directory Structure
 ``` graphql
 project/
+├── custom-yolo/           # folder containing pre-trained YOLO model but .gitignored
 ├── images/                # raw images to label
-├── yolo_model.pt          # your trained YOLO model
-├── sam_b.pt               # pretrained SAM model
 ├── output/
 │   ├── masks/             # generated masks
 │   ├── overlays/          # visualization of predictions
 │   └── annotations.json   # structured result
-└── pipeline.py            # your main script
+├── sam-model              # contains the Segment Anything Model
+└── scr/                   # contains notebook
+|   ├── app.py
+├── readMe.md
+├── requirements.txt
 ```
 
 ##### 📂 To Run It Locally:
