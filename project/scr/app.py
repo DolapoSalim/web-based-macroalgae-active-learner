@@ -1,6 +1,8 @@
 import os
 import cv2
 import tempfile
+import pandas as pd
+import numpy as np
 import streamlit as st
 from PIL import Image
 from ultralytics import YOLO
@@ -49,6 +51,18 @@ if uploaded_file:
     else:
         st.write("No detections found.")
 
-# Option to download detection result as .csv
-st.button("Download Detection Results", key="download_results", disabled=True)
+    if result.boxes:
+        df = result.to_df()
+        df['image'] = uploaded_file.name
+        st.dataframe(df)
+        csv = df.to_csv(index=False).encode('utf-8')
 
+        if st.button("Download CSV"):
+            st.download_button(
+                label="Download Detection as CSV",
+                data=csv,
+                file_name="detection_results.csv",
+                mime="text/csv",
+            ):
+    else:
+        st.write("No detection found")
