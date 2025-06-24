@@ -6,7 +6,7 @@ from PIL import Image
 from ultralytics import YOLO
 
 st.set_page_config(page_title="Macroalgae YOLOv8 Detection", layout="wide")
-st.title("🌿 Macroalgae Detection using YOLOv8")
+st.title("Macroalgae Detection using YOLOv8")
 
 YOLO_MODEL_PATH = r"C:\Users\dolap\OneDrive\Documents\DOLAPO\data-analysis\web-based-macroalgae-active-learner\project\custom-yolo\customV8.pt"
 model = YOLO(YOLO_MODEL_PATH)
@@ -38,7 +38,7 @@ if uploaded_file:
         st.subheader("🔍 YOLOv8 Detection")
         st.image(detected_image_rgb, use_container_width=True)
 
-    st.subheader("📌 Detected Classes with Confidence Scores")
+    st.subheader("Detected macroalgae with Confidence Scores")
 
     if result.boxes:
         for box in result.boxes:
@@ -48,3 +48,7 @@ if uploaded_file:
             st.write(f"- {class_name}: {conf:.2%} confidence")
     else:
         st.write("No detections found.")
+
+# Option to download detection result as .csv
+st.button("Download Detection Results", key="download_results", disabled=True)
+
