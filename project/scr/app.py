@@ -63,6 +63,6 @@ if uploaded_file:
                 data=csv,
                 file_name="detection_results.csv",
                 mime="text/csv",
-            ):
+            )
     else:
         st.write("No detection found")
