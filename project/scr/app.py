@@ -66,3 +66,4 @@ if uploaded_file:
             )
     else:
         st.write("No detection found")
+        
